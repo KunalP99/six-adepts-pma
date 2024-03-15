@@ -6,12 +6,12 @@
 }
 
 .mainContainer {
+  h1 {
+    @include h1;
+  }
+
   .aboutContainer {
     @include container;
-
-    h1 {
-      @include h1;
-    }
 
     .underline {
       background-color: $primary-colour;
@@ -38,5 +38,10 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .articleContainer {
+    background-color: #F9F9F9;
+    @include container;
   }
 }

@@ -16,3 +16,9 @@
     @include reset-btn;
   }
 }
+
+@media (max-width: 365px) {
+  .nav {
+    width: 365px;
+  }
+}
