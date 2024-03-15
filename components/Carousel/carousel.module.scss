@@ -1,10 +1,25 @@
+@import "../../app/variables.scss";
+
 .embla {
   overflow: hidden;
-}
-.emblaContainer {
-  display: flex;
-}
-.emblaSlide {
-  flex: 0 0 100%;
-  min-width: 0;
+  
+  .emblaContainer {
+    display: flex;
+    gap: 20px;
+
+    .singleArticle {
+      width: 220px;
+      @include article-slide-text;
+
+      h3 {
+        @include h3;
+        margin-top: 16px
+      }
+
+      .underline {
+        @include underline(16px, 20%);
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
