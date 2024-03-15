@@ -11,7 +11,7 @@ export default function Home() {
       <div className={styles.mainContainer}>
 
         <section className={styles.aboutContainer}>
-          <div>
+          <div className={styles.headingContainer}>
             <h1 className={cormorant.className}>Who Are We?</h1>
             <div className={styles.underline}></div>
           </div>

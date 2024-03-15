@@ -17,6 +17,14 @@ $primary-colour: #C4188C;
   }
 }
 
+@mixin underline ($marginTop, $width) {
+  background-color: $primary-colour;
+  margin-top: $marginTop;
+  border-radius: 20px;
+  width: $width;
+  height: 3px;
+}
+
 /* FONT PROPERTIES */
 // TODO: Clamp for responsiveness
 @mixin h1 {
@@ -24,8 +32,18 @@ $primary-colour: #C4188C;
   font-weight: bold;
 }
 
+@mixin h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 @mixin text {
   font-size: 14px;
+  line-height: 28px;
+}
+
+@mixin article-slide-text {
+  font-size: 13px;
   line-height: 28px;
 }
 
@@ -36,8 +54,11 @@ $primary-colour: #C4188C;
 }
 
 @mixin container {
-  margin-top: 80px;
-  padding: 0px 15px;
+  padding: 80px 15px 80px 15px;
+}
+
+@mixin h1-container {
+  margin-bottom: 40px;
 }
 
 @mixin reset-btn {

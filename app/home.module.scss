@@ -13,13 +13,12 @@
   .aboutContainer {
     @include container;
 
-    .underline {
-      background-color: $primary-colour;
-      margin-top: 10px;
-      border-radius: 20px;
-      width: 17%;
-      height: 3px;
-      margin-bottom: 40px;
+    .headingContainer {
+      @include h1-container;
+
+      .underline {
+        @include underline(10px, 17%);
+      }
     }
 
     p {
@@ -45,7 +44,7 @@
     @include container;
 
     h1 {
-      padding-top: 80px;
+      @include h1-container;
     }
   }
 }
