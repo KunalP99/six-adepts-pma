@@ -7,13 +7,16 @@
     display: flex;
     gap: 20px;
 
-    .singleArticle {
+    .singleArticleShort {
       width: 220px;
       @include article-slide-text;
 
       h3 {
         @include h3;
-        margin-top: 16px
+        margin-top: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .underline {
