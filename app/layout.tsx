@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from './font';
 import Navbar from "@/components/Navbar/Navbar";
 import "./global.scss"
 import "./reset.scss";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "George King & Six Adepts PMA",

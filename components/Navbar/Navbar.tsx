@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { cormorant } from "@/app/font";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <p>George King & Six Adepts</p>
+        <p className={cormorant.className}>George King & Six Adepts</p>
         <p>PRIVATE MEMBERS ASSOCIATION</p>
       </div>
       <button>
