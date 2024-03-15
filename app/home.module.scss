@@ -43,5 +43,9 @@
   .articleContainer {
     background-color: #F9F9F9;
     @include container;
+
+    h1 {
+      padding-top: 80px;
+    }
   }
 }

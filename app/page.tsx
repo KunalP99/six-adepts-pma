@@ -1,8 +1,10 @@
 import Image from "next/image";
 import styles from "./home.module.scss";
 import { cormorant } from "@/app/font";
+import Carousel from "@/components/Carousel/Carousel";
 
 export default function Home() {
+
   return (
     <main>
       <div className={styles.hero}></div>
@@ -25,6 +27,10 @@ export default function Home() {
           />
         </section>
 
+        <section className={styles.articleContainer}>
+          <h1 className={cormorant.className}>Read Our Articles</h1>
+          <Carousel />
+        </section>
       </div>
     </main>
   );
