@@ -1,0 +1,30 @@
+/* COLOURS */
+$primary-colour: #C4188C;
+
+/* MIXINS */
+@mixin logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :first-child {
+    font-size: 16px;
+  }
+
+  :nth-child(2) {
+    font-size: 7px;
+    margin-top: 4px;
+  }
+}
+
+// TODO: reponsiveness using media queries
+@mixin nav-container {
+  padding: 0px 15px;
+}
+
+@mixin main-container {}
+
+@mixin reset-btn {
+  background: transparent;
+  border: none;
+}

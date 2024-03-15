@@ -2,6 +2,8 @@ import styles from "./home.module.scss";
 
 export default function Home() {
   return (
-    <main></main>
+    <main>
+      <div className={styles.hero}></div>
+    </main>
   );
 }
