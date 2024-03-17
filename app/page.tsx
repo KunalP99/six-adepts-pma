@@ -33,6 +33,20 @@ export default function Home() {
           <Carousel data={articleShortHome} />
           <button type="button">View more</button>
         </section>
+
+        <section className={styles.findOutMoreContainer}>
+          <div className={styles.card}>
+            <h1 className={cormorant.className}>Find Out More</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <Image
+              src={"/UFO.png"}
+              width={195}
+              height={95}
+              alt="UFO"
+            />
+            <button>Get Started</button>
+          </div>
+        </section>
       </div>
     </main>
   );

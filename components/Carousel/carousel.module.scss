@@ -19,6 +19,10 @@
         text-overflow: ellipsis;
       }
 
+      p {
+        @include text(400);
+      }
+
       .underline {
         @include underline(16px, 20%);
         margin-bottom: 16px;

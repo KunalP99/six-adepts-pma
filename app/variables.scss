@@ -37,9 +37,10 @@ $primary-colour: #C4188C;
   font-weight: bold;
 }
 
-@mixin text {
+@mixin text($weight) {
   font-size: 14px;
   line-height: 28px;
+  font-weight: $weight;
 }
 
 @mixin article-slide-text {
@@ -57,6 +58,15 @@ $primary-colour: #C4188C;
   border-radius: 8px;
 }
 
+@mixin secondary-btn {
+  font-weight: 600;
+  border: none;
+  background: white;
+  color: $primary-colour;
+  padding: 14px 44px;
+  border-radius: 8px;
+}
+
 @mixin reset-btn {
   background: transparent;
   border: none;
@@ -69,7 +79,7 @@ $primary-colour: #C4188C;
 }
 
 @mixin container {
-  padding: 80px 15px 80px 15px;
+  padding: 80px 24px 80px 24px;
 }
 
 @mixin h1-container {
