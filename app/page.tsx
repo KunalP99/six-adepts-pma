@@ -7,6 +7,7 @@ import articleShortHome from "./article_short_data/articleShortHome";
 export default function Home() {
   return (
     <main>
+      {/* TODO: Use background image property here and remove position absolute on nav bar*/}
       <div className={styles.hero}></div>
       <div className={styles.mainContainer}>
 
@@ -30,6 +31,7 @@ export default function Home() {
         <section className={styles.articleContainer}>
           <h1 className={cormorant.className}>Read Our Articles</h1>
           <Carousel data={articleShortHome} />
+          <button type="button">View more</button>
         </section>
       </div>
     </main>

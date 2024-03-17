@@ -47,6 +47,21 @@ $primary-colour: #C4188C;
   line-height: 28px;
 }
 
+/* BUTTON */
+@mixin primary-btn {
+  font-weight: 500;
+  border: none;
+  background: $primary-colour;
+  color: white;
+  padding: 14px 44px;
+  border-radius: 8px;
+}
+
+@mixin reset-btn {
+  background: transparent;
+  border: none;
+}
+
 /* CONTAINERS*/
 // TODO: reponsiveness using media queries
 @mixin nav-container {
@@ -59,9 +74,4 @@ $primary-colour: #C4188C;
 
 @mixin h1-container {
   margin-bottom: 40px;
-}
-
-@mixin reset-btn {
-  background: transparent;
-  border: none;
 }
