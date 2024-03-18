@@ -1,7 +1,7 @@
 @import "../../app/variables.scss";
 
 .embla {
-  overflow: hidden;
+  overflow: hidden;  
   
   .emblaContainer {
     display: flex;
@@ -20,7 +20,7 @@
       }
 
       p {
-        @include text(400);
+        @include text(400, 18px);
       }
 
       .underline {
