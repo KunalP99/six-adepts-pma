@@ -67,7 +67,7 @@ $seconday-font-colour: #545151;
 
 @mixin secondary-btn {
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(14px ,2vw ,20px);
   border: none;
   background: white;
   color: $primary-colour;
