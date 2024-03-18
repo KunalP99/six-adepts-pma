@@ -1,8 +1,7 @@
-import Image from "next/image";
 import styles from "./home.module.scss";
-import { cormorant } from "@/app/font";
-import shortArticles from "./short_articles_data/shortArticles";
-import ShortArticle from "@/components/Articles/ShortArticle";
+import About from "@/components/Home/01_About/About";
+import Articles from "@/components/Home/02_Short Articles/ShortArticles";
+import FindOutMore from "@/components/Home/03_Find Out More/FindOutMore";
 
 export default function Home() {
   return (
@@ -10,73 +9,9 @@ export default function Home() {
       {/* TODO: Use background image property here and remove position absolute on nav bar*/}
       <div className={styles.hero}></div>
       <div className={styles.mainContainer}>
-
-        <section className={styles.aboutContainer}>
-          <div className={styles.aboutContentContainer}>
-            <div className={styles.headingContainer}>
-              <h1 className={cormorant.className}>Who Are We?</h1>
-              <div className={styles.underline}></div>
-            </div>
-            <div className={styles.aboutTextContainer}>
-              <p>Based on the work and legacy of Space Intelligences who graced our Planet in the last century. George King who trained himself as a Master of Yoga was used by Higher Forces to act as a channel for Truth to be given to humanity prior to the dawn of the Aquarian Age of Peace and Enlightenment. The Six Adepts carried out battles in the lower astral realms to rid the worst devil that had existed there.</p>
-              <p>The Association&apos;s function is to promote the work of the Six Adepts and carry out tasks as laid down to help bring lasting Peace and prosperity on Earth.</p>
-              <p>Those wishing to join need to have a burning desire to work for World Peace. They need to begin by studying the work and sacrifice made by Doctor George King and the Mighty Six Adepts.</p>
-            </div>
-          </div>
-          <Image
-            src={"/about-img.png"}
-            width={552}
-            height={732}
-            alt="George King"
-          />
-        </section>
-
-        <section className={styles.articleContainer}>
-          <div className={styles.articleContent}>
-            <div className={styles.articlesHeading}>
-              <h1 className={cormorant.className}>Read Our Articles</h1>
-              <div className={styles.viewButton}>
-                <button type="button">
-                  View more
-                  <i>
-                    <Image
-                      src={"/arrow.svg"}
-                      width={24}
-                      height={24}
-                      alt="View more articles"
-                    />
-                  </i>
-                </button>
-              </div>
-            </div>
-            <div className={styles.shortArticlesContainer}>
-              {shortArticles.map(article => (
-                <ShortArticle
-                  key={article.title}
-                  title={article.title}
-                  img={article.img}
-                  summary={article.summary}
-                />
-              )).slice(0, 3)}
-            </div>
-            <button className={styles.mobileViewButton} type="button">View more</button>
-          </div>
-        </section>
-
-        <section className={styles.findOutMoreContainer}>
-          <div className={styles.card}>
-            <h1 className={cormorant.className}>Find Out More</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <Image
-              src={"/UFO.png"}
-              width={195}
-              height={95}
-              alt="UFO"
-            />
-            <button>Get Started</button>
-          </div>
-        </section>
-
+        <About />
+        <Articles />
+        <FindOutMore />
       </div>
     </main>
   );

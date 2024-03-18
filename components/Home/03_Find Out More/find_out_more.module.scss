@@ -1,0 +1,31 @@
+@import "/app/variables.scss";
+
+  .container {
+    @include container;
+    @include max-width-container;
+
+    .card {
+      background: linear-gradient(#222222, #3D3C3C);
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      padding: 50px 0px;
+
+      h1 {
+        padding-bottom: 24px;
+      }
+
+      p {
+        @include text(400, 20px);
+        padding: 0px 24px;
+      }
+
+      img {
+        margin: 70px 0px;
+      }
+
+      button {
+        @include secondary-btn;
+      }
+    }
+  }
