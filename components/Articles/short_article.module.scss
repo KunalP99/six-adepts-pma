@@ -1,12 +1,32 @@
 @import "/app/variables.scss";
 
-.shortArticleContainer {
+.articleButton {
+  @include reset-btn;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   width: 100%;
   max-width: 550px;
 
-  img {
+  &:hover {
+    .imgWrapper img {
+      transform: scale(1.1);
+    }
+  }
+
+  .imgWrapper {
     height: auto;
-    width: 100%;
+    overflow: hidden; 
+    border-radius: 8px;
+
+    img {
+      transition: transform .5s ease;
+      height: auto;
+      width: 100%;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
   }
 
   .headingContainer {
@@ -16,7 +36,7 @@
       @include h3;
       margin-top: 16px;
     }
-
+    
     .underline {
       @include underline(10px, 74px);
     }
@@ -26,9 +46,12 @@
     @include short-article-text;
   }
 }
+.articleButton:hover {
+  color: $primary-colour;
+}
 
 @media (min-width: 1000px) {
-  .shortArticleContainer {
+  .articleButton {
     max-width: 432px;
 
     .headingContainer {

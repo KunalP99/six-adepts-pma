@@ -10,19 +10,22 @@ interface Props {
 
 const ShortArticle = ({ title, img, summary }: Props) => {
   return (
-    <div className={styles.shortArticleContainer}>
-      <Image
-        src={`/article_short/${img}`}
-        width={432}
-        height={367}
-        alt={`${title} article`}
-      />
+    <button type="button" className={styles.articleButton}>
+      <div className={styles.imgWrapper}>
+        <Image
+          src={`/article_short/${img}`}
+          width={432}
+          height={367}
+          alt={`${title} article`}
+        />
+      </div>
+
       <div className={styles.headingContainer}>
         <h3 className={cormorant.className}>{title}</h3>
         <div className={styles.underline}></div>
       </div>
       <p>{summary}</p>
-    </div>
+    </button>
   )
 }
 
