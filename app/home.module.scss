@@ -2,7 +2,7 @@
 
 .hero {
   background-color: #b8b8b8;
-  height: 100vh; /* Change height depending on how illustration looks*/
+  height: 100vh; /* Change height depending on how illustration looks */
 }
 
 .mainContainer {
@@ -12,36 +12,45 @@
 
   .aboutContainer {
     @include container;
+    @include max-width-container;
+    .aboutContentContainer {
+      .headingContainer {
+        @include h1-container;
 
-    .headingContainer {
-      @include h1-container;
+        .underline {
+          @include underline(4px, 50px);
+        }
+      }
 
-      .underline {
-        @include underline(10px, 17%);
+      .aboutTextContainer {
+        p {
+          @include text(400, 22px);
+        }
+
+        :nth-child(2), 
+        :nth-child(3) {
+          margin-top: 24px;
+        }
       }
     }
 
-    p {
-      @include text(400);
-    }
-    :nth-child(3) { // 
-      margin-top: 24px;
-    }
-    :nth-child(4) {
-      margin-top: 24px;
-    }
-
-    .aboutImg {
-      margin-top: 70px;
+    img {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 70px;
+      height: auto;
     }
   }
 
   .articleContainer {
     background-color: #F9F9F9;
     @include container;
+
+    .articleContent {
+      @include max-width-container;
+    }
 
     h1 {
       @include h1-container;
@@ -58,6 +67,7 @@
 
   .findOutMoreContainer {
     @include container;
+    @include max-width-container;
 
     // "Find Out More" Card
     .card {
@@ -72,7 +82,7 @@
       }
 
       p {
-        @include text(400);
+        @include text(400, 20px);
         padding: 0px 24px;
       }
 
@@ -82,6 +92,41 @@
 
       button {
         @include secondary-btn;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .mainContainer {
+    .aboutContainer {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+
+      img {
+        margin: 0px;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .mainContainer {
+    .aboutContainer {
+      gap: 120px;
+      .aboutContentContainer {
+        .aboutTextContainer {
+          :nth-child(2), 
+          :nth-child(3) {
+            margin-top: 40px;
+          }
+        }
+      }
+
+      img {
+        max-width: 552px;
       }
     }
   }

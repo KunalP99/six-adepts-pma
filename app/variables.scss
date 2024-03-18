@@ -28,7 +28,7 @@ $primary-colour: #C4188C;
 /* FONT PROPERTIES */
 // TODO: Clamp for responsiveness
 @mixin h1 {
-  font-size: 30px;
+  font-size: clamp(30px, 3vw, 60px);
   font-weight: bold;
 }
 
@@ -37,10 +37,14 @@ $primary-colour: #C4188C;
   font-weight: bold;
 }
 
-@mixin text($weight) {
-  font-size: 14px;
-  line-height: 28px;
+@mixin text($weight, $max) {
+  font-size: clamp(14px, 1.5vw, $max);
+  line-height: 36px;
   font-weight: $weight;
+
+  @media (min-width: 1200px) {
+    line-height: 36px;
+  }
 }
 
 @mixin article-slide-text {
@@ -84,4 +88,14 @@ $primary-colour: #C4188C;
 
 @mixin h1-container {
   margin-bottom: 40px;
+
+  @media (min-width: 1300px) {
+    margin-bottom: 70px;
+  }
 }
+
+@mixin max-width-container {
+  max-width: 1392px;
+  margin: 0 auto;
+}
+
