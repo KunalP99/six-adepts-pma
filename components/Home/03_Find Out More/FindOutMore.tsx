@@ -6,15 +6,18 @@ const FindOutMore = () => {
   return (
     <section className={styles.container}>
       <div className={styles.card}>
-        <h1 className={cormorant.className}>Find Out More</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div className={styles.content}>
+          <h1 className={cormorant.className}>Find Out More</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button className={styles.button}>Get Started</button>
+        </div>
         <Image
           src={"/UFO.png"}
-          width={195}
-          height={95}
+          width={467}
+          height={192}
           alt="UFO"
         />
-        <button>Get Started</button>
+        <button className={styles.mobileButton}>Get Started</button>
       </div>
     </section>
   )
