@@ -1,5 +1,6 @@
 /* COLOURS */
 $primary-colour: #C4188C;
+$seconday-font-colour: #545151;
 
 /* MIXINS */
 @mixin logo {
@@ -33,7 +34,7 @@ $primary-colour: #C4188C;
 }
 
 @mixin h3 {
-  font-size: 20px;
+  font-size: clamp(24px, 2vw, 32px);
   font-weight: bold;
 }
 
@@ -47,8 +48,10 @@ $primary-colour: #C4188C;
   }
 }
 
-@mixin article-slide-text {
-  font-size: 13px;
+@mixin short-article-text {
+  color: $seconday-font-colour;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 28px;
 }
 
@@ -69,6 +72,13 @@ $primary-colour: #C4188C;
   color: $primary-colour;
   padding: 14px 44px;
   border-radius: 8px;
+}
+
+@mixin tertiary-btn {
+  @include reset-btn;
+  color: $primary-colour;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 @mixin reset-btn {
@@ -92,6 +102,10 @@ $primary-colour: #C4188C;
   @media (min-width: 1300px) {
     margin-bottom: 70px;
   }
+}
+
+@mixin h3-container {
+  margin-bottom: 16px;
 }
 
 @mixin max-width-container {

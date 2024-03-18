@@ -1,0 +1,40 @@
+@import "/app/variables.scss";
+
+.shortArticleContainer {
+  width: 100%;
+  max-width: 550px;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .headingContainer {
+    @include h3-container;
+    
+    h3 {
+      @include h3;
+      margin-top: 16px;
+    }
+
+    .underline {
+      @include underline(10px, 74px);
+    }
+  }
+
+  p {
+    @include short-article-text;
+  }
+}
+
+@media (min-width: 1000px) {
+  .shortArticleContainer {
+    max-width: 432px;
+
+    .headingContainer {
+      .underline {
+        @include underline(16px, 74px);
+      }
+    }
+  }
+}

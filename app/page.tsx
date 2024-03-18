@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./home.module.scss";
 import { cormorant } from "@/app/font";
-import Carousel from "@/components/Carousel/Carousel";
-import articleShortHome from "./article_short_data/articleShortHome";
+import shortArticles from "./short_articles_data/shortArticles";
+import ShortArticle from "@/components/Articles/ShortArticle";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
               <div className={styles.underline}></div>
             </div>
             <div className={styles.aboutTextContainer}>
-              <p>George King who trained himself as a Master of Yoga was used by Higher Forces to act as a channel for Truth to be given to humanity prior to the dawn of the Aquarian Age of Peace and Enlightenment. The Six Adepts carried out battles in the lower astral realms to rid the worst devil that had existed there.</p>
+              <p>Based on the work and legacy of Space Intelligences who graced our Planet in the last century. George King who trained himself as a Master of Yoga was used by Higher Forces to act as a channel for Truth to be given to humanity prior to the dawn of the Aquarian Age of Peace and Enlightenment. The Six Adepts carried out battles in the lower astral realms to rid the worst devil that had existed there.</p>
               <p>The Association&apos;s function is to promote the work of the Six Adepts and carry out tasks as laid down to help bring lasting Peace and prosperity on Earth.</p>
               <p>Those wishing to join need to have a burning desire to work for World Peace. They need to begin by studying the work and sacrifice made by Doctor George King and the Mighty Six Adepts.</p>
             </div>
@@ -31,13 +31,35 @@ export default function Home() {
           />
         </section>
 
-
-
         <section className={styles.articleContainer}>
           <div className={styles.articleContent}>
-            <h1 className={cormorant.className}>Read Our Articles</h1>
-            <Carousel data={articleShortHome} />
-            <button type="button">View more</button>
+            <div className={styles.articlesHeading}>
+              <h1 className={cormorant.className}>Read Our Articles</h1>
+              <div className={styles.viewButton}>
+                <button type="button">
+                  View more
+                  <i>
+                    <Image
+                      src={"/arrow.svg"}
+                      width={24}
+                      height={24}
+                      alt="View more articles"
+                    />
+                  </i>
+                </button>
+              </div>
+            </div>
+            <div className={styles.shortArticlesContainer}>
+              {shortArticles.map(article => (
+                <ShortArticle
+                  key={article.title}
+                  title={article.title}
+                  img={article.img}
+                  summary={article.summary}
+                />
+              )).slice(0, 3)}
+            </div>
+            <button className={styles.mobileViewButton} type="button">View more</button>
           </div>
         </section>
 
@@ -54,6 +76,7 @@ export default function Home() {
             <button>Get Started</button>
           </div>
         </section>
+
       </div>
     </main>
   );

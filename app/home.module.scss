@@ -18,7 +18,7 @@
         @include h1-container;
 
         .underline {
-          @include underline(4px, 50px);
+          @include underline(4px, 72px);
         }
       }
 
@@ -50,13 +50,25 @@
 
     .articleContent {
       @include max-width-container;
+
+      .shortArticlesContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 70px;
+      }
     }
 
-    h1 {
+    .articlesHeading {
       @include h1-container;
+      
+      .viewButton {
+        button {
+          display: none;
+        }
+      }
     }
 
-    button {
+    .mobileViewButton {
       @include primary-btn;
       display: block;
       margin-left: auto;
@@ -97,6 +109,41 @@
   }
 }
 
+@media (min-width: 550px) {
+  .mainContainer {
+    .articleContainer {
+      .articleContent {
+        .articlesHeading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .viewButton {
+            button {
+              @include tertiary-btn;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              i {
+                height: 24px;
+              }
+            }
+          }
+        }
+
+        .mobileViewButton {
+          display: none;
+        }
+
+        .shortArticlesContainer {
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 900px) {
   .mainContainer {
     .aboutContainer {
@@ -107,6 +154,18 @@
       img {
         margin: 0px;
         max-width: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .mainContainer {
+    .articleContainer {
+      .articleContent {
+        .shortArticlesContainer {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       }
     }
   }
