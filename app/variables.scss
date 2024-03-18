@@ -10,6 +10,7 @@ $seconday-font-colour: #545151;
 
   :first-child {
     font-size: 16px;
+    font-weight: 700;
   }
 
   :nth-child(2) {
@@ -36,6 +37,10 @@ $seconday-font-colour: #545151;
 @mixin h3 {
   font-size: clamp(24px, 2vw, 32px);
   font-weight: bold;
+}
+
+@mixin footer-heading {
+  font-size: clamp(32px, 2vw, 40px)
 }
 
 @mixin text($weight, $max) {

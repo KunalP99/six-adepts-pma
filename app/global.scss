@@ -1,6 +1,19 @@
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
   
 @media (max-width: 365px) {
   body {
