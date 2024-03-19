@@ -1,0 +1,88 @@
+@import "../../app/variables.scss";
+
+.mobileNav {
+  @include nav-container;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    @include logo;
+  }
+
+  button {
+    @include reset-btn;
+  }
+}
+
+.nav {
+  display: none;
+  
+  .logo {
+    @include logo;
+  }
+}
+
+@media (max-width: 365px) {
+  .nav {
+    width: 365px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobileNav {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1845px;
+    margin: 0 auto;
+    position: absolute;
+    right: 38px;
+    left: 38px;
+    top: 30px;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .line {
+        width: 3px;
+        height: 30px;
+        background: $primary-colour;
+        border-radius: 8px;
+      }
+
+      ul {
+        display: flex;
+        gap: 40px;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      button {
+        @include primary-btn;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px)  {
+  .nav {
+    .menu {
+      gap: 90px;
+      ul {
+        gap: 90px;
+      }
+    }
+  }
+}

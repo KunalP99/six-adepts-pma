@@ -1,0 +1,24 @@
+@import "../app/variables.scss";
+
+.hero {
+  height: 100vh; /* Change height depending on how illustration looks */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 2560px;
+  background-image: url('/placeholder-img.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainContainer {
+  h1 {
+    @include h1;
+  }
+}
+
+@media (min-width: 1930px) {
+  .hero {
+    height: 1080px;
+  }
+}

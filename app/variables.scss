@@ -1,0 +1,135 @@
+/* COLOURS */
+$primary-colour: #C4188C;
+$seconday-font-colour: #545151;
+
+/* MIXINS */
+@mixin logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :first-child {
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 700;
+  }
+
+  :nth-child(2) {
+    font-size: clamp(7px, 1vw, 12px);
+    margin-top: 4px;
+  }
+
+}
+
+@mixin underline ($marginTop, $width) {
+  background-color: $primary-colour;
+  margin-top: $marginTop;
+  border-radius: 20px;
+  width: $width;
+  height: 3px;
+}
+
+/* FONT PROPERTIES */
+@mixin h1 {
+  font-size: clamp(30px, 3vw, 60px);
+  font-weight: bold;
+}
+
+@mixin h3 {
+  font-size: clamp(24px, 2vw, 32px);
+  font-weight: bold;
+}
+
+@mixin footer-heading {
+  font-size: clamp(32px, 2vw, 40px)
+}
+
+@mixin text($weight, $max) {
+  font-size: clamp(14px, 1.5vw, $max);
+  line-height: 36px;
+  font-weight: $weight;
+
+  @media (min-width: 1200px) {
+    line-height: 36px;
+  }
+}
+
+@mixin short-article-text {
+  color: $seconday-font-colour;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* BUTTON */
+@mixin primary-btn {
+  font-weight: 500;
+  border: none;
+  background: $primary-colour;
+  color: white;
+  padding: 14px 44px;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #ad1a7c;
+  }
+}
+
+@mixin secondary-btn {
+  font-weight: 600;
+  font-size: clamp(14px ,2vw ,20px);
+  border: none;
+  background: white;
+  color: $primary-colour;
+  padding: 14px 44px;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #d7d7d7;
+  }
+}
+
+@mixin tertiary-btn {
+  @include reset-btn;
+  color: $primary-colour;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@mixin reset-btn {
+  background: transparent;
+  border: none;
+}
+
+/* CONTAINERS*/
+// TODO: reponsiveness using media queries
+@mixin nav-container {
+  padding: 0px 15px;
+}
+
+@mixin container {
+  padding: 80px 24px 80px 24px;
+
+  @media (min-width: 1000px) {
+    padding: 180px 24px 180px 24px;
+  }
+}
+
+@mixin h1-container {
+  margin-bottom: 40px;
+
+  @media (min-width: 1300px) {
+    margin-bottom: 70px;
+  }
+}
+
+@mixin h3-container {
+  margin-bottom: 16px;
+}
+
+@mixin max-width-container {
+  max-width: 1392px;
+  margin: 0 auto;
+}
+

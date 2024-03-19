@@ -1,0 +1,63 @@
+@import "/app/variables.scss";
+
+.articleButton {
+  @include reset-btn;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  max-width: 550px;
+
+  &:hover {
+    .imgWrapper img {
+      transform: scale(1.1);
+    }
+  }
+
+  .imgWrapper {
+    height: auto;
+    overflow: hidden; 
+    border-radius: 8px;
+
+    img {
+      transition: transform .5s ease;
+      height: auto;
+      width: 100%;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .headingContainer {
+    @include h3-container;
+    
+    h3 {
+      @include h3;
+      margin-top: 16px;
+    }
+    
+    .underline {
+      @include underline(10px, 74px);
+    }
+  }
+
+  p {
+    @include short-article-text;
+  }
+}
+.articleButton:hover {
+  color: $primary-colour;
+}
+
+@media (min-width: 1000px) {
+  .articleButton {
+    max-width: 432px;
+
+    .headingContainer {
+      .underline {
+        @include underline(16px, 74px);
+      }
+    }
+  }
+}

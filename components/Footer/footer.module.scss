@@ -1,0 +1,106 @@
+@import "/app/variables.scss";
+
+.footer {
+  @include container;
+  @include max-width-container;
+  padding-top: 0px;
+
+  .line {
+    @include underline(0px, 100%)
+  }
+
+  .content {
+    padding: 50px 15px 0px 15px;
+
+    .nav {
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+      
+      .menu {
+        margin-top: 30px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+
+    .action {
+      .content {
+        .text {
+          @include text(400, 18px);
+          line-height: 120%;
+          text-align: center;
+          margin-top: 80px;
+        }
+
+        button {
+          @include primary-btn;
+          display: block;
+          margin: auto;
+          margin-top: 24px;
+        }
+      }
+    }
+
+    .logo {
+      @include logo;
+      margin-top: 80px;
+    }
+  }
+
+  h3 {
+    @include footer-heading;
+  }
+}
+
+@media (min-width: 750px) {
+  .footer {
+    padding-bottom: 50px;
+    padding-top: 0px;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+
+      .action {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 100px;
+
+        .content {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 0px;
+
+          .text {
+            width: 360px;
+            text-align: left;
+            margin-top: 0px;
+          }
+          button {
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .footer {
+    .content {
+      padding: 70px 0px 0px 0px;
+
+      .nav {
+        gap: 200px;
+      }
+    }
+  }
+}
