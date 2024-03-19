@@ -9,14 +9,15 @@ $seconday-font-colour: #545151;
   align-items: center;
 
   :first-child {
-    font-size: 16px;
+    font-size: clamp(16px, 2vw, 28px);
     font-weight: 700;
   }
 
   :nth-child(2) {
-    font-size: 7px;
+    font-size: clamp(7px, 1vw, 12px);
     margin-top: 4px;
   }
+
 }
 
 @mixin underline ($marginTop, $width) {
