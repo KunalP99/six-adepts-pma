@@ -40,12 +40,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1845px;
     margin: 0 auto;
     position: absolute;
-    right: 38px;
-    left: 38px;
-    top: 30px;
+    right: 0px;
+    left: 0px;
+    background-color: white;
+    padding: 20px;
 
     .menu {
       display: flex;

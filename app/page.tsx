@@ -7,7 +7,11 @@ export default function Home() {
   return (
     <main>
       {/* TODO: Use background image property here and remove position absolute on nav bar*/}
-      <div className={styles.hero}></div>
+      <div className={styles.hero}>
+        <div className={styles.heroText}>
+          <p>Based on the work and legacy of Space Intelligences who graced our Planet in the last century.</p>
+        </div>
+      </div>
       <div className={styles.mainContainer}>
         <About />
         <Articles />
