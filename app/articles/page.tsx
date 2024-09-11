@@ -1,10 +1,11 @@
 import styles from './articles.module.scss';
 import { cormorant } from "@/app/font";
 import ShortArticle from '@/components/Articles/ShortArticle';
-import shortArticlesData from '../short_articles_data/shortArticles';
+import article from '../article_data/article';
 import { useMemo } from 'react';
 
 interface Article {
+  id: number,
   title: string,
   img: string,
   summary: string,
@@ -12,9 +13,9 @@ interface Article {
 }
 
 export default function Articles() {
-  const historyArticles = useMemo(() => filterArticlesBySection('history-and-background', shortArticlesData), []);
+  const historyArticles = useMemo(() => filterArticlesBySection('history-and-background', article), []);
 
-  const aquarianArticles = useMemo(() => filterArticlesBySection('aquarian-age-sciences', shortArticlesData), []);
+  const aquarianArticles = useMemo(() => filterArticlesBySection('aquarian-age-sciences', article), []);
 
   return (
     <div className={styles.articlesContainer}>
@@ -32,16 +33,18 @@ export default function Articles() {
           {aquarianArticles}
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 
 function filterArticlesBySection(section: string, shortArticles: Article[]) {
   return shortArticles
     .filter(article => article.section === section)
-    .map(({ title, img, summary, section }) => (
+    .sort((a, b) => a.id - b.id) // Sort by id in ascending order
+    .map(({ id, title, img, summary, section }) => (
       <ShortArticle
-        key={title}
+        id={id}
+        key={id}
         title={title}
         img={img}
         summary={summary}

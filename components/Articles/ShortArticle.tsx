@@ -1,20 +1,22 @@
 import Image from "next/image";
 import { cormorant } from "@/app/font";
 import styles from "./short_article.module.scss";
+import Link from "next/link";
 
 interface Props {
+  id: number
   title: string,
   img: string,
   summary: string,
   section: string
 }
 
-const ShortArticle = ({ title, img, summary, section }: Props) => {
+const ShortArticle = ({ id, title, img, summary, section }: Props) => {
   return (
-    <button type="button" className={styles.articleButton}>
+    <Link href={`/articles/${id}`} className={styles.articleButton}>
       <div className={styles.imgWrapper}>
         <Image
-          src={`/article_short/${img}`}
+          src={`/articles/${img}`}
           width={432}
           height={367}
           alt={`${title} article in the ${section} section`}
@@ -26,7 +28,7 @@ const ShortArticle = ({ title, img, summary, section }: Props) => {
         <div className={styles.underline}></div>
       </div>
       <p>{summary}</p>
-    </button>
+    </Link>
   )
 }
 
