@@ -31,6 +31,7 @@ const Articles = () => {
               title={article.title}
               img={article.img}
               summary={article.summary}
+              section={article.section}
             />
           )).slice(0, 3)}
         </div>

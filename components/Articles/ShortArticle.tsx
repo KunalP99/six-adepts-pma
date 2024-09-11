@@ -5,10 +5,11 @@ import styles from "./short_article.module.scss";
 interface Props {
   title: string,
   img: string,
-  summary: string
+  summary: string,
+  section: string
 }
 
-const ShortArticle = ({ title, img, summary }: Props) => {
+const ShortArticle = ({ title, img, summary, section }: Props) => {
   return (
     <button type="button" className={styles.articleButton}>
       <div className={styles.imgWrapper}>
@@ -16,7 +17,7 @@ const ShortArticle = ({ title, img, summary }: Props) => {
           src={`/article_short/${img}`}
           width={432}
           height={367}
-          alt={`${title} article`}
+          alt={`${title} article in the ${section} section`}
         />
       </div>
 
