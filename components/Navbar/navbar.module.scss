@@ -42,10 +42,14 @@
     justify-content: space-between;
     margin: 0 auto;
     position: absolute;
-    right: 0px;
-    left: 0px;
-    background-color: white;
+    right: 38px;
+    left: 38px;
     padding: 20px;
+    z-index: 100;
+
+    .logo {
+      color: white;
+    }
 
     .menu {
       display: flex;
@@ -62,6 +66,10 @@
       ul {
         display: flex;
         gap: 40px;
+
+        li > a {
+          color: white;
+        }
       }
     }
 
