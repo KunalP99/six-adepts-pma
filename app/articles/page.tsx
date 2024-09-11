@@ -1,7 +1,7 @@
 import styles from './articles.module.scss';
 import { cormorant } from "@/app/font";
 import ShortArticle from '@/components/Articles/ShortArticle';
-import article from '../article_data/article';
+import article from '../article_data/articles';
 import { useMemo } from 'react';
 
 interface Article {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cormorant } from "@/app/font";
 import styles from './articles.module.scss';
-import article from "@/app/article_data/article";
+import articles from "@/app/article_data/articles";
 import ShortArticle from "@/components/Articles/ShortArticle";
 
 const Articles = () => {
@@ -25,7 +25,7 @@ const Articles = () => {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-          {article
+          {articles
             .sort((a, b) => b.id - a.id)
             .map(article => (
               <ShortArticle
