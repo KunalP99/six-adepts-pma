@@ -22,7 +22,9 @@ export default function Article({ params }: { params: { articleId: string } }) {
         <p>Written by Natu Patel</p>
         <div className={styles.underline}></div>
       </div>
-      <iframe className={styles.pdf} src={article.url}></iframe>
+      <object className={styles.pdf} data={article.url} type="application/pdf">
+        <embed src={article.url} type="application/pdf" />
+      </object>
     </div>
   );
 }
