@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cormorant } from "@/app/font";
 import styles from './articles.module.scss';
-import shortArticles from "@/app/short_articles_data/shortArticles";
+import articles from "@/app/article_data/articles";
 import ShortArticle from "@/components/Articles/ShortArticle";
 
 const Articles = () => {
@@ -25,14 +25,18 @@ const Articles = () => {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-          {shortArticles.map(article => (
-            <ShortArticle
-              key={article.title}
-              title={article.title}
-              img={article.img}
-              summary={article.summary}
-            />
-          )).slice(0, 3)}
+          {articles
+            .sort((a, b) => b.id - a.id)
+            .map(article => (
+              <ShortArticle
+                id={article.id}
+                key={article.title}
+                title={article.title}
+                img={article.img}
+                summary={article.summary}
+                section={article.section}
+              />
+            )).slice(0, 3)}
         </div>
         <button className={styles.mobileViewButton} type="button">View more</button>
       </div>

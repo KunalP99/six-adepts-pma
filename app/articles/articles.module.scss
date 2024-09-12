@@ -1,8 +1,36 @@
 @import '/app/variables.scss';
 
 .articlesContainer {
-  .articleHeading {
-    padding-top: 0px;
+  @include container;
+  @include max-width-container;
+
+  .headingContainer {
+    @include h1-container;
+
+    h1 {
+      @include h1;
+      margin-bottom: 15px;
+    }
   }
 
+  h2 {
+    @include h2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .shortArticleContainer {
+    @include articles-container;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 550px) {
+  .articlesContainer {
+    h2 {
+      text-align: left;
+      margin-bottom: 48px;
+    }
+
+  }
 }

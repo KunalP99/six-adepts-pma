@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
         <div className={styles.menu}>
           <ul>
-            <li><Link href="#">Articles</Link></li>
+            <li><Link href="/articles">Articles</Link></li>
             <li><Link href="#">Activities</Link></li>
             <li><Link href="#">Membership</Link></li>
             <li><Link href="#">Master George King</Link></li>

@@ -30,8 +30,12 @@ $seconday-font-colour: #545151;
 
 /* FONT PROPERTIES */
 @mixin h1 {
-  font-size: clamp(30px, 3vw, 60px);
+  font-size: clamp(30px, 4vw, 60px);
   font-weight: bold;
+}
+
+@mixin h2 {
+  font-size: clamp(25px, 2.5vw, 45px);
 }
 
 @mixin h3 {
@@ -126,6 +130,21 @@ $seconday-font-colour: #545151;
 
 @mixin h3-container {
   margin-bottom: 16px;
+}
+
+@mixin articles-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 70px;
+
+  @media (min-width: 550px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
 }
 
 @mixin max-width-container {
