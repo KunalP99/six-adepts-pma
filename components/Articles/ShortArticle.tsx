@@ -16,7 +16,7 @@ const ShortArticle = ({ id, title, img, summary, section }: Props) => {
     <Link href={`/articles/${id}`} className={styles.articleButton}>
       <div className={styles.imgWrapper}>
         <Image
-          src={`/articles/${img}`}
+          src={`/articles/${img === '' ? "placeholder.png" : img}`}
           width={432}
           height={367}
           alt={`${title} article in the ${section} section`}
