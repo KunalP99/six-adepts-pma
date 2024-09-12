@@ -2,6 +2,7 @@
 
 import styles from './article.module.scss';
 import articles from '@/app/article_data/articles';
+import { cormorant } from "@/app/font";
 
 export default function Article({ params }: { params: { articleId: string } }) {
   const articleId = parseInt(params.articleId, 10);
@@ -17,7 +18,7 @@ export default function Article({ params }: { params: { articleId: string } }) {
   return (
     <div className={styles.pdfViewer}>
       <div className={styles.headingContainer}>
-        <h1>{article.title}</h1>
+        <h2 className={cormorant.className}>{article.title}</h2>
         <p>Written by Natu Patel</p>
         <div className={styles.underline}></div>
       </div>

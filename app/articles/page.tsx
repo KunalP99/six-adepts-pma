@@ -15,7 +15,9 @@ interface Article {
 export default function Articles() {
   const historyArticles = useMemo(() => filterArticlesBySection('history-and-background', article), []);
 
-  const aquarianArticles = useMemo(() => filterArticlesBySection('aquarian-age-sciences', article), []);
+  const sixAdeptsArticles = useMemo(() => filterArticlesBySection('missions-carried-out-by-six-adepts', article), []);
+
+  const aquarianArticles = useMemo(() => filterArticlesBySection('aquarian-age-sciences-and-developments', article), []);
 
   return (
     <div className={styles.articlesContainer}>
@@ -24,14 +26,22 @@ export default function Articles() {
         <p>Libero justo laoreet sit amet. Sed tempus urna et pharetra pharetra massa massa.</p>
       </div>
       <div>
+        
         <h2 className={cormorant.className}>1.0 History & Background</h2>
         <div className={styles.shortArticleContainer}>
           {historyArticles}
         </div>
-        <h2 className={cormorant.className}>2.0 Aquarian Age Sciences and Developments</h2>
+
+        <h2 className={cormorant.className}>2.0 Missions Carried Out By The Six Adepts</h2>
+        <div className={styles.shortArticleContainer}>
+          {sixAdeptsArticles}
+        </div>
+
+        <h2 className={cormorant.className}>3.0 Aquarian Age Sciences and Developments</h2>
         <div className={styles.shortArticleContainer}>
           {aquarianArticles}
         </div>
+
       </div>
     </div>
   );

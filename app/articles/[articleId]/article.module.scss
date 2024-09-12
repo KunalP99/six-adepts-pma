@@ -10,6 +10,14 @@
     h2 {
       @include h2;
     }
+
+    p {
+      margin-top: 8px;
+    }
+
+    .underline {
+      @include underline(5px, 25px)
+    }
   }
 
 
