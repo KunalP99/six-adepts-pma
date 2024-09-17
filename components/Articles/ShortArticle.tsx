@@ -12,8 +12,11 @@ interface Props {
 }
 
 const ShortArticle = ({ id, title, img, summary, section }: Props) => {
+  // Replaces spaces with - instead of using default %20
+  let urlTitle = title.replace(" ", "-");
+
   return (
-    <Link href={`/articles/${id}`} className={styles.articleButton}>
+    <Link href={`/articles/${id}/${urlTitle.replace(" ", "-")}`} className={styles.articleButton}>
       <div className={styles.imgWrapper}>
         <Image
           src={`/articles/${img === '' ? "placeholder.png" : img}`}
