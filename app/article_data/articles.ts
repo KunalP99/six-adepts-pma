@@ -17,7 +17,7 @@ const article = [
   },
   {
     id: 3,
-    title: "Armageddon ",
+    title: "Armageddon",
     img: "armageddon.png",
     summary: "Throughout the ages there has been talk of Armageddon – the bitter clash between good and evil.  Is there a basis for such a concept?  Or is it some mysterious unknown phenomena best left alone.",
     section: "missions-carried-out-by-six-adepts",
